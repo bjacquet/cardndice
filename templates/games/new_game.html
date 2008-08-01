@@ -1,0 +1,17 @@
+{% extends "base_site.html" %}
+
+{% block content %}
+  {% if form %}
+  <h2>Add new game!</h2>
+  {% if form.has_errors %}
+  <h3>Please correct the following error{{ form.error_dict|pluralize }}:</h3>
+  {% endif %}
+
+  <form method="post" action=".">
+  {{ form.as_p }}
+  <input type="submit" />
+  </form>
+  {% else %}
+  <p>aaaaaaaaaaaaaaahhhhhhhhhhhhh</p>
+  {% endif %}
+{% endblock %}

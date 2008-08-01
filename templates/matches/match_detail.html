@@ -1,0 +1,16 @@
+{% extends "base_site.html" %}
+
+{% block content %}
+<h2>Match details</h2>
+<p><strong>Game Played:</strong> {{ match.game.name }}</p>
+<h3>Results:</h3>
+{% if results %}
+<ol>
+  {% for result in results %}
+  <li>{{ result.player.name }} - {{ result.result }} points</li>
+  {% endfor %}
+</ol>
+{% else %}
+No results available.
+{% endif %}
+{% endblock %}

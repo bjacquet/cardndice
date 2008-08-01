@@ -1,0 +1,10 @@
+{% extends "base_site.html" %}
+
+{% block content %}
+<h2>Matches:</h2>
+<ul>
+  {% for object in object_list %}
+  <li><b>Game:</b><a href="{{object.id}}/">{{ object.game.name }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
