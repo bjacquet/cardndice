@@ -1,0 +1,14 @@
+{% extends "base_site.html" %}
+
+{% block content %}
+{% if object_list %}
+  <h2>Available pools:</h2>
+  <ul>
+    {% for object in object_list %}
+      <li><a href="{{object.id}}/">{{ object.question }}</a></li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No polls are available</p>
+{% endif %}
+{% endblock %}

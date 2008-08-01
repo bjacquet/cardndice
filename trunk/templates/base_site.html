@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3c.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3c.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{% block title %}"Carn'n'Dice, a games site"{% endblock %}</title>
+</head>
+
+<body>
+{% block header %}
+<h1>Card'n'Dice</h1>
+{% if user.is_authenticated %}
+<p>Logout</p>
+{% else %}
+<p>Already a user?<strong><a href="/accounts/login/?next=/">Login</a></strong>
+<br />
+Want to become a user?<strong><a href="/accounts/register/?next=/">Register</a></strong></p>
+{% endif %}
+{% endblock %}
+{% block navigation %}
+<strong>Navigation:</strong>
+<ul>
+  <li><a href="/" >Index</a></li>
+  <li><a href="/matches/">Matches</a></li>
+  <li><a href="/games/">Games</a></li>
+  <li><a href="/players/">Players</a></li>
+  <li><a href="/polls/">Polls</a></li>
+  <li><a href="/admin/">Admin</a></li>
+</ul>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}
+<hr>
+<address></address>
+<!-- hhmts start --> Last modified: Tue Mar 18 21:38:43 WET 2008 <!-- hhmts end -->
+{% endblock %}
+</body> </html>

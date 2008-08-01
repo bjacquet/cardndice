@@ -1,0 +1,13 @@
+{% extends "base_site.html" %}
+
+{% block content %}
+<h1>{{ object.name }}</h1>
+
+{% if error_message %}
+  <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<p><strong>Minimum Players:</strong> {{ object.min_player }}</p>
+<p><strong>Maximum Players:</strong> {{ object.max_player }}</p>
+<p><strong>Owner:</strong> {{ object.ownerId }}</p>
+{% endblock %}
