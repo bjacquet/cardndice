@@ -1,0 +1,1 @@
+A simple website to try out the Django platform.
